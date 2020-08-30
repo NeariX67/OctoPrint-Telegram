@@ -3,7 +3,7 @@ from octoprint.printer import UnknownScript
 import logging, sarge, hashlib, datetime, time, operator, socket
 import octoprint.filemanager
 import requests
-import pigpio
+import RPi.GPIO as GPIO
 from flask_babel import gettext
 from .telegramNotifications import telegramMsgDict
 
@@ -13,7 +13,6 @@ from .telegramNotifications import telegramMsgDict
 # SEE DOCUMENTATION IN WIKI: https://github.com/fabianonline/OctoPrint-Telegram/wiki/Add%20commands%20and%20notifications
 ################################################################################################################
 
-pi = pigpio.pi()
 
 
 class TCMD():
@@ -569,12 +568,12 @@ class TCMD():
 		self.main.send_msg(msg, chatID=chat_id, markup="Markdown")
 ############################################################################################
 	def cmdPowerUp(self,chat_id,from_id,cmd,parameter):
-		pi.write(21, 1)
+		#pi.write(21, 1)
 		msg = "Powersupply turned on!"
 		self.main.send_msg(msg, chatID=chat_id, markup="Markdown")
 ############################################################################################
 	def cmdPowerDown(self,chat_id,from_id,cmd,parameter):
-		pi.write(21, 0)
+		#pi.write(21, 0)
 		msg = "Powersupply turned off!"
 
 		self.main.send_msg(msg, chatID=chat_id, markup="Markdown")

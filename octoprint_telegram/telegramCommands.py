@@ -568,12 +568,12 @@ class TCMD():
 		self.main.send_msg(msg, chatID=chat_id, markup="Markdown")
 ############################################################################################
 	def cmdPowerUp(self,chat_id,from_id,cmd,parameter):
-		#pi.write(21, 1)
+		GPIO.output(21, 1)
 		msg = "Powersupply turned on!"
 		self.main.send_msg(msg, chatID=chat_id, markup="Markdown")
 ############################################################################################
 	def cmdPowerDown(self,chat_id,from_id,cmd,parameter):
-		#pi.write(21, 0)
+		GPIO.output(21, 0)
 		msg = "Powersupply turned off!"
 
 		self.main.send_msg(msg, chatID=chat_id, markup="Markdown")

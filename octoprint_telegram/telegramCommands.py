@@ -13,8 +13,6 @@ from .telegramNotifications import telegramMsgDict
 # SEE DOCUMENTATION IN WIKI: https://github.com/fabianonline/OctoPrint-Telegram/wiki/Add%20commands%20and%20notifications
 ################################################################################################################
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(21, GPIO.OUT)
 
 class TCMD():
 	def __init__(self, main):
@@ -569,14 +567,17 @@ class TCMD():
 		self.main.send_msg(msg, chatID=chat_id, markup="Markdown")
 ############################################################################################
 	def cmdPowerUp(self,chat_id,from_id,cmd,parameter):
+		GPIO.setmode(GPIO.BCM)
+		GPIO.setup(21, GPIO.OUT)
 		GPIO.output(21, 1)
 		msg = "Powersupply turned on!"
 		self.main.send_msg(msg, chatID=chat_id, markup="Markdown")
 ############################################################################################
 	def cmdPowerDown(self,chat_id,from_id,cmd,parameter):
+		GPIO.setmode(GPIO.BCM)
+		GPIO.setup(21, GPIO.OUT)
 		GPIO.output(21, 0)
 		msg = "Powersupply turned off!"
-
 		self.main.send_msg(msg, chatID=chat_id, markup="Markdown")
 ############################################################################################
 	def cmdConnection(self,chat_id,from_id,cmd,parameter):

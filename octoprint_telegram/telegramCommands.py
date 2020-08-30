@@ -839,6 +839,8 @@ class TCMD():
 		                           "/con - Connect/disconnect printer.\n"
 		                           "/upload - You can just send me a gcode file to save it to my library.\n"
 		                           "/sys - Execute Octoprint System Commands.\n"
+		                           "/powerup - Enables the Powersupply of your printer.\n"
+		                           "/powerdown - Disables the Powersupply of your printer.\n"
 		                           "/ctrl - Use self defined controls from Octoprint.\n"
 		                           "/tune - Set feed- and flowrate. Control temperatures.\n"
 		                           "/user - Get user info.\n"

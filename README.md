@@ -1,3 +1,11 @@
+##Fork changes:
+Added 2 Commands to allow GPIO interaction.
+/powerdown: Writes GPIO21 to LOW
+/powerup: Writes GPIO21 to HIGH
+
+GPIO Pin can be changed in [this file](octoprint_telegram/telegramCommands.py), lines 571, 572 and 578, 579
+
+
 <!-- omit in toc -->
 # OctoPrint-Telegram
 

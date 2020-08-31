@@ -1,6 +1,6 @@
 ## Fork changes:
-Added 2 Commands to allow GPIO interaction.
-/powerdown: Writes GPIO21 to LOW
+Added 2 Commands to allow GPIO interaction.<br>
+/powerdown: Writes GPIO21 to LOW<br>
 /powerup: Writes GPIO21 to HIGH
 
 GPIO Pin can be changed in [this file](octoprint_telegram/telegramCommands.py), lines 571, 572 and 578, 579
@@ -14,7 +14,7 @@ GPIO Pin can be changed in [this file](octoprint_telegram/telegramCommands.py), 
 This plugin integrates Telegram Messenger with Octoprint. It sends messages (with photos if available) on print start, end and failure. Also it sends messages during the print at configurable intervals. That way you don't have to remember to regularly have a look at the printing process.
 Also, you can control Octoprint via messages (settings, start a print and much more). Send `/status` to get the current printer status or `/abort` to abort the current print. Send `/help` for a list of all recognized commands. You may also use this bot in groups.
 
-**Latest release: [1.5.0](https://github.com/fabianonline/OctoPrint-Telegram/releases)**
+**Latest release: [1.5.3](https://github.com/fabianonline/OctoPrint-Telegram/releases)**
 
 <!-- omit in toc -->
 ## Contents
